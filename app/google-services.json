@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "817047221374",
+    "project_id": "foodordring-3304e",
+    "storage_bucket": "foodordring-3304e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:817047221374:android:4d8f5df38af29d9384142f",
+        "android_client_info": {
+          "package_name": "com.example.foodordring"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "817047221374-emrpf8833o45e8qlj9pp4h0r4na0vm85.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFauflfkZMZ-4X4NKsJ0P31owVsDYURtw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "817047221374-emrpf8833o45e8qlj9pp4h0r4na0vm85.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

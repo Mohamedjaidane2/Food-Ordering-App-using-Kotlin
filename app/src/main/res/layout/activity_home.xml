@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeActivity"
+    android:background="@color/grayC"
+    >
+
+    <LinearLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30dp"
+        >
+
+        <ImageView
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:background="@drawable/menu"
+            android:layout_marginLeft="30dp"
+            />
+
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/shoping_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/shoping"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/topbar"
+        app:layout_constraintBottom_toBottomOf="@+id/topbar"
+        android:layout_marginRight="30dp"
+        />
+
+    <TextView
+        android:id="@+id/Delicious"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="sans-serif-black"
+        android:lineSpacingExtra="8sp"
+        android:text="Text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="40sp"
+        android:typeface="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topbar" />
+    <EditText
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/input_field"
+        android:fontFamily="sans-serif-medium"
+        android:paddingLeft="50dp"
+        android:hint="Search"
+        android:textColorHint="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Delicious" />
+
+    <ImageView
+        android:id="@+id/search_icon"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        app:layout_constraintBottom_toBottomOf="@id/search_bar"
+        app:layout_constraintTop_toTopOf="@id/search_bar"
+        app:layout_constraintStart_toStartOf="@id/search_bar"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/search"
+
+        />
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout_cat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabMode="fixed"
+        android:backgroundTint="@color/grayC"
+        app:tabGravity="fill"
+        app:tabIndicatorGravity="bottom"
+        app:tabSelectedTextColor="@color/primary"
+        app:tabIndicatorAnimationMode="elastic"
+        app:tabIndicatorColor="@color/primary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_bar"
+
+        />
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/cat_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout_cat"
+        android:layout_marginTop="50dp"
+/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewFood"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cat_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        tools:listitem="@layout/fooditem" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
